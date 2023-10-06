@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:wght@100&family=Cairo&family=Dancing+Script&family=Exo+2&family=Fraunces:opsz,wght@9..144,700&family=Glory:wght@200&family=Montserrat:ital,wght@0,200;0,400;0,700;1,100&family=PT+Serif:ital,wght@0,400;0,700;1,700&family=Poppins:wght@300;400&family=Roboto+Mono:wght@100;300&family=Rubik&family=Ruwudu&family=Victor+Mono:wght@100;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media screen and (max-width: 768px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    section .image-side {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    section .image-side img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-overlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        color: white;
+    }
+
+    .text-overlay h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .text-overlay pre {
+        font-size: 1rem;
+        font-weight: lighter;
+        white-space: normal;
+    }
+
+    .word {
+        margin-left: 0;
+    }
+
+    .signup, .signup1 {
+        font-size: 0.8rem;
+        margin-top: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-media a {
+        font-size: 0.9rem;
+        padding: 10px;
+        border-radius: 20px;
+        width: auto;
+    }
+
+    .or {
+        font-size: 1rem;
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        color: #666666;
+    }
+
+    .or::before,
+    .or::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: rgb(191, 191, 191);
+        margin: 0 10px;
+    }
+
+    .data {
+        margin-top: 20px;
+    }
+
+    .data input {
+        width: 100%;
+        max-width: 400px;
+        height: 40px;
+        border-radius: 12px;
+        border: 1px solid rgb(191, 191, 191);
+        margin-bottom: 10px;
+    }
+
+    .data label {
+        color: #666666;
+    }
+
+    .forget-your-pass {
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
+
+    .signin {
+        width: 100%;
+        max-width: 300px;
+        height: 50px;
+        border-radius: 32px;
+        border: 1px solid #997825;
+        background-color: #997825;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+    }
+
+    .signin a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .last {
+        font-size: 0.8rem;
+    }
+}
+
+/* Apply the old design for screens larger than 768px */
+@media screen and (min-width: 769px) {
+    section {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    section .image-side {
+        position: relative;
+        width: 50%;
+        height: 100%;
+    }
+
+    section .image-side img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 45%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .text-overlay h2 {
+        font-size: 3vw;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .text-overlay pre {
+        font-size: 1.6vw;
+        font-weight: lighter;
+    }
+
+    .word {
+        margin-left: -43%;
+    }
+
+    .signup {
+        position: absolute;
+        top: 4%;
+        right: 5%;
+    }
+
+    .signup a,
+    .social-media a,
+    .forget-your-pass a {
+        color: #000;
+    }
+
+    .welcome {
+        position: absolute;
+        top: 12%;
+        right: 33%;
+        font-weight: 500;
+    }
+
+    .social-media {
+        position: absolute;
+        top: 22%;
+        right: 8%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .social-media a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-family: Avenir;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        border: 1px solid black;
+        border-radius: 40px;
+        padding: 7px;
+        width: 568px;
+    }
+
+    .or {
+        position: absolute;
+        top: calc(40% + 30px);
+        right: 8%;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        color: #666666;
+        font-weight: lighter;
+    }
+
+    .or::before,
+    .or::after {
+        content: "";
+        width: 250px;
+        height: 1px;
+        background-color: rgb(191, 191, 191);
+        display: block;
+        margin: 0 10px;
+    }
+
+    .data {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: calc(46% + 30px);
+        right: 8%;
+    }
+
+    .data input {
+        width: 568px;
+        height: 56px;
+        border-radius: 12px;
+        border: 1px solid rgb(191, 191, 191);
+    }
+
+    .data label {
+        color: #666666;
+        padding-bottom: 10px;
+    }
+
+    .forget-your-pass {
+        position: absolute;
+        top: 80%;
+        right: 8%;
+    }
+
+    .signin {
+        width: 300px;
+        height: 50px;
+        border-radius: 32px;
+        border: 1px solid #997825;
+        background-color: #997825;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 84%;
+        right: 25%;
+        color: white;
+    }
+
+    .signin a {
+        color: white;
+        text-decoration: none;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .signup1 {
+        position: absolute;
+        top: 92%;
+        right: 27%;
+    }
+
+    .signup1 a {
+        color: #000;
+        text-decoration: underline;
+        font-size: 16px;
+    }
+}
