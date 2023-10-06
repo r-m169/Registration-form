@@ -24,16 +24,19 @@
         max-width: 100%;
         height: auto;
         overflow: hidden;
+        object-fit: cover;
     }
 
     section .image-side img {
         width: 100%;
         height: auto;
+        object-fit: cover;
+
     }
 
     .text-overlay {
-        position: relative;
-        top: 0;
+        position: absolute;
+        top: 15%;
         left: 0;
         text-align: center;
         color: white;
@@ -51,8 +54,16 @@
         white-space: normal;
     }
 
-    .word {
-        margin-left: 0;
+    /* .word {
+        margin-left: 10px;
+    } */
+    .welcome{
+        padding: 10px;
+    }
+    section .image-side img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .signup, .signup1 {
@@ -68,9 +79,12 @@
 
     .social-media a {
         font-size: 0.9rem;
+        border: 1px solid grey;
         padding: 10px;
         border-radius: 20px;
         width: auto;
+        text-decoration: none;
+        color: black;
     }
 
     .or {
@@ -135,7 +149,6 @@
     }
 }
 
-/* Apply the old design for screens larger than 768px */
 @media screen and (min-width: 769px) {
     section {
         display: flex;
