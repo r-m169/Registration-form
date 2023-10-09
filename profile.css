@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:wght@100&family=Cairo&family=Dancing+Script&family=Exo+2&family=Fraunces:opsz,wght@9..144,700&family=Glory:wght@200&family=Montserrat:ital,wght@0,200;0,400;0,700;1,100&family=PT+Serif:ital,wght@0,400;0,700;1,700&family=Poppins:wght@300;400&family=Roboto+Mono:wght@100;300&family=Rubik&family=Ruwudu&family=Victor+Mono:wght@100;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+span {
+    margin-bottom: 30px;
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 6vh;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#logout {
+    color: white;
+    background-color: #EB4335;
+    width: 30%;
+    height: 10vh;
+    padding: 2vh 0;
+    border-radius: 2.5vw;
+    border: none;
+    font-size: 24px;
+
+}
+
+@media screen and (max-width: 767px) {
+    #logout {
+        font-size: 10px;
+        width: 70%;
+        height: 5vh;
+        padding: 2vh 0;
+        border-radius: 2.5vw;
+
+    }
+}

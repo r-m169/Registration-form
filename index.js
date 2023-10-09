@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const validationMessage = document.getElementById("validationMessage");
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         emailError.textContent = "";
         passwordError.textContent = "";
@@ -21,14 +21,18 @@ document.addEventListener("DOMContentLoaded", function() {
             emailError.style.color = "red";
         }
 
-        if (password.length < 6 || password.includes(" ")) {
+        if (!isValidPassword(password)) {
             passwordError.textContent = "Password is not valid";
             passwordError.style.color = "red";
         }
 
-        if (isValidEmail(email) && (password.length >= 6 && !password.includes(" "))) {
-            validationMessage.textContent = "All fields are valid";
-            validationMessage.style.color = "green";
+        if (isValidEmail(email) && isValidPassword(password)) {
+            const emailValue = emailInput.value;
+            const passwordValue = passwordInput.value;
+            localStorage.setItem('email',emailValue);
+            localStorage.setItem('password',passwordValue);
+            window.location.href = "profile.html"
+
         }
     });
 
@@ -36,4 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
+
+    function isValidPassword(password) {
+        return password.length >= 6 && !password.includes(" ");
+    }
 });
+
+
+// if (!localStorage.getItem('email')) {
+//     console.log('Email removed from localStorage'); 
+// } else {
+//     console.log('Email still exists in localStorage');  
+// }
